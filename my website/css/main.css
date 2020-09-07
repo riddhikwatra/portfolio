@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+#slides{
+  width: 100%;
+  height: 500px;
+  
+}
+.content{
+  padding-top: 500px;
+}
+
+.font-18{
+  color: beige;
+  font-size: 18px;
+}
+
+.logo{
+  padding-top: 0%;
+  padding-bottom: 0%;
+  width: 4rem;
+  height: 5rem;
+  border-radius: 50%; 
+}
+
+.main-header{
+  padding: 0%;
+  width: 100%;
+  height: 90px;
+  margin: 0%;
+  background-color:rgb(102, 2, 102);
+  background-image: linear-gradient(45deg,rgb(107, 3, 107),rgb(190, 6, 37)); 
+}
+
+.main-header-item{
+  padding: 0 1.5rem;
+}
+
+.main-header-item a{
+  text-decoration: none;
+  color: white;
+  font-family: emoji;
+  font-size: 20px;
+}
+.main-header-item a.active{
+  background-color: white;
+  color: pink;
+}
+
+.main-header-item a:hover{
+  color:pink;
+}
+.main-header-item-list{
+  padding: 0%;
+  margin: 2rem;
+  display: flex;
+  list-style: none;
+}
+
+.main-header-nav{
+
+  height: 100%;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.name a{
+  text-decoration: none;
+  color: white;
+  font-family: emoji;
+  font-size: 20px;
+}
+
+.navbar{
+  position: sticky;
+}
+
+.picture{
+  width: 100%;
+  height: 100%;
+}
+
+.sec{
+  width: 100%;
+  padding: 20px;
+}
+
+body{
+  height: 400vh;
+  background-color: rgb(100, 3, 92); /* For browsers that do not support gradients */
+  background-image: linear-gradient(54deg,rgb(107, 3, 107),rgb(190, 6, 37)); 
+}
+figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0!important;
+}
+
+h1{
+  color: wheat;
+  font-family: emoji;
+  text-align: center;
+}
+h2{
+  color: wheat;
+  font-family: none;
+}
+
+h3{
+  font-family: none;
+  font-size: 1.3rem;
+  color: beige;
+}
+
+hr{
+  border-top: 1px solid pink;
+}
+html{
+  scroll-behavior: smooth;
+}
+p{
+  color: white;
+}
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
