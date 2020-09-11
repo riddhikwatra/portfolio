@@ -5,19 +5,45 @@
 
   }
 @media (max-width: 768px) {
-  
+
 }
 @media (max-width: 576px) {
-  
+
 }
 
-#slides{
-  width: 100%;
-  height: 500px;
-  
+
+.contact-icon{
+    align-items: center;
+
 }
+.carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+.contact-item{
+  width: 25%;
+  padding: 20px;
+
+}
+.contact-item a{
+  color:rgb(190, 6, 37);
+}
+.contact-item a:hover{
+  color:rgb(107, 3, 107);
+}
+.contact-list{
+  height: 200px;
+  display: flex;
+}
+.contact-nav-bar{
+  padding: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
 .content{
-  padding-top: 500px;
+  padding: 0px;
 }
 
 .font-18{
@@ -30,7 +56,7 @@
   padding-bottom: 0%;
   width: 4rem;
   height: 5rem;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .main-header{
@@ -39,7 +65,7 @@
   height: 90px;
   margin: 0%;
   background-color:rgb(102, 2, 102);
-  background-image: linear-gradient(45deg,rgb(107, 3, 107),rgb(190, 6, 37)); 
+  background-image: linear-gradient(45deg,rgb(107, 3, 107),rgb(190, 6, 37));
 }
 
 .main-header-item{
@@ -52,7 +78,7 @@
   font-family: emoji;
   font-size: 20px;
 }
-.main-header-item a.active{
+.main-header-item a:active{
   background-color: white;
   color: pink;
 }
@@ -68,7 +94,6 @@
 }
 
 .main-header-nav{
-
   height: 100%;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   display: flex;
@@ -95,11 +120,15 @@
   width: 100%;
   padding: 20px;
 }
+.slides{
+  width: 100%;
+  height: 1400px;
 
+}
 body{
-  height: 400vh;
+
   background-color: rgb(100, 3, 92); /* For browsers that do not support gradients */
-  background-image: linear-gradient(54deg,rgb(107, 3, 107),rgb(190, 6, 37)); 
+  background-image: linear-gradient(54deg,rgb(107, 3, 107),rgb(190, 6, 37));
 }
 figure {
   position: relative;
@@ -157,11 +186,3 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
-
-
-
-
-
-
-
