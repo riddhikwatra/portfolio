@@ -25,6 +25,7 @@ ul{
   padding-left: 2rem;
 }
 
+
 .contact-icon{
     align-items: center;
 
@@ -175,12 +176,7 @@ hr{
 html{
   scroll-behavior: smooth;
 }
+
 p{
   color: white;
 }
-
-
-
-
-
-

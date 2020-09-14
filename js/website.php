@@ -5,22 +5,29 @@ if(isset($_POST['submit'])){
     // File upload configuration
     $name=$_POST['name'];
     $intro=$_POST['intro'];
-   $insert = $db->query("INSERT INTO users(name,intro)  VALUES ('$name','$intro')");
+    $countEd=$_POST['countEd'];
+    $countExp=$_POST['countExp'];
+    $fb=$_POST['fb'];
+    $twitter=$_POST['twitter'];
+    $insta=$_POST['insta'];
+    $link=$_POST['link'];
+    echo "$countEd";
+    echo "$countExp";
+   $insert = $db->query("INSERT INTO users(name,intro,facebook,twitter,instagram,linkedin)  VALUES ('$name','$intro','$fb','$twitter','$insta','$link')");
    if(!$insert)
    echo "there was a problem";
    else{
      $query = $db->query("SELECT max(user_id) as id FROM users");
      $row = mysqli_fetch_array($query);
      $user_id=$row['id'];
-  }$targetDir = "uploads/";
+  }
+    $targetDir = "uploads/";
     $allowTypes = array('jpg','png','jpeg','gif');
-
-    $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = '';
+    $insertValuesSQL=$errorUpload=$errorUploadType="";
     $fileNames = array_filter($_FILES['files']['name']);
     if(!empty($fileNames)){
         foreach($_FILES['files']['name'] as $key=>$val){
             // File upload path
-            echo "string";
             $fileName = basename($_FILES['files']['name'][$key]);
             $targetFilePath = $targetDir . $fileName;
 
@@ -44,10 +51,7 @@ if(isset($_POST['submit'])){
             // Insert image file name into database
             $insert = $db->query("INSERT INTO images (file_name, uploaded_on,user_id) VALUES $insertValuesSQL");
             if($insert){
-                $errorUpload = !empty($errorUpload)?'Upload Error: '.trim($errorUpload, ' | '):'';
-                $errorUploadType = !empty($errorUploadType)?'File Type Error: '.trim($errorUploadType, ' | '):'';
-                $errorMsg = !empty($errorUpload)?'<br/>'.$errorUpload.'<br/>'.$errorUploadType:'<br/>'.$errorUploadType;
-                $statusMsg = "Files are uploaded successfully.".$errorMsg;
+                $statusMsg = "Files are uploaded successfully.";
             }else{
                 $statusMsg = "Sorry, there was an error uploading your file.";
             }
@@ -57,6 +61,23 @@ if(isset($_POST['submit'])){
     }
 
     // Display status message
+    while($countEd>0){
+      $course=$_POST["edH".(string)($countEd-1)];
+      $institute=$_POST["ed".(string)($countEd-1)];
+      $insert = $db->query("INSERT INTO education VALUES ('$course','$institute',$user_id)");
+      if(!$insert){
+          $statusMsg = "Sorry, there was an error uploading your file.";
+      }
+      $countEd=$countEd-1;
+    }
+    while($countExp>0){
+      $job=$_POST["exp".(string)($countExp-1)];
+      $insert = $db->query("INSERT INTO experience VALUES ('$job',$user_id)");
+      if(!$insert){
+          $statusMsg = "Sorry, there was an error uploading your file.";
+      }
+      $countExp=$countExp-1;
+    }
     echo $statusMsg;
 
 }
