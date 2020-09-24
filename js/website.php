@@ -354,5 +354,13 @@ if(isset($_POST['submit2'])){
 
     </script>
 
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".main-header-nav");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
     </body>
     </html>
