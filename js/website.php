@@ -185,6 +185,7 @@ if(isset($_POST['submit2'])){
     <section class="sec" id="education">
             <br>
             <br>
+            <br>
             <h1>Education
                 <i class="material-icons font-34">school</i>
             </h1>
@@ -203,6 +204,7 @@ if(isset($_POST['submit2'])){
             ?>
     </section>
     <section class="sec" id="experience">
+            <br>
             <br>
             <br>
             <h1>Experience
@@ -243,6 +245,7 @@ if(isset($_POST['submit2'])){
             ?>
     </section>
     <section class="sec" id="gallery">
+    <br>
     <br>
     <br>
     <h1>Gallery
