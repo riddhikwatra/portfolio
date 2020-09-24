@@ -1,39 +1,70 @@
-.form{
-    width: 30rem;
-    max-width: 80%;
-    margin: auto;
-    align-content: center;
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.form-control label,
+/* Control the left side */
+.left {
+  left: 0;
+  background-image: inherit;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-image: inherit;
+}
+.form{
+    width: 40rem;
+    max-width: 90%;
+    padding-left: 70px;
+}
 .form-control input,
 .form-control textarea{
     width: 100%;
     margin: 1rem 0;
     display: block;
-    font-size:20px; 
-    color: rgb(243, 134, 152);
-}
-.form-control input,
-.form-control textarea{
+    font-size:20px;
+    color:white;
+    background-color: inherit;
     border: 1px solid wheat;
-   
+    border-radius: 5px;
 }
+.form-control input,{
+  height: 35px;
+}
+
+.form-control label{
+    width: 100%;
+    margin: 1rem 0;
+    display: block;
+    font-size:20px;
+    color:pink;
+     border-radius: 25px;
+}
+
 button{
     width: 100%;
     font: inherit;
     font-size: 25px;
-    border-color:rgb(190, 6, 37);
+    border-color:pink;
     border-radius: 5px;
-    color: rgb(190, 6, 37);
-    background-color: white;
+    color: pink;
+    background-color: black;
 }
 button:hover{
-    color: white;
-    background-color:rgb(190, 6, 37);
+    color: pink;
+    background-color:grey;
 }
 body{
-    height: 400vh;
-    background-color: rgb(100, 3, 92); /* For browsers that do not support gradients */
-    background-image: linear-gradient(54deg,rgb(107, 3, 107),rgb(190, 6, 37)); 
+    background-color: black;
+    background-image: url("../img/back.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
