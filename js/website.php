@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
                 // Upload file to server
                 if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)){
                     // Image db insert sql
-                    $insertValuesSQL .= "('".$file."',$user_id),";
+                    $insertValuesSQL .= "('$file',$user_id),";
                 }else{
                     $errorUpload .= $_FILES['files']['name'][$key].' | ';
                 }
@@ -326,44 +326,38 @@ if(isset($_POST['submit2'])){
       var name="<?php echo $name ?>";
       txt=txt.concat(name);
       hey();
-      hey();
       var slideIndex = 1;
-      var timer = null;
-   showSlides(slideIndex);
+      showSlides(slideIndex);
 
-   // Next/previous controls
-   function plusSlides(n) {
-      clearTimeout(timer);
-     showSlides(slideIndex += n);
-   }
+      // Next/previous controls
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
 
-   // Thumbnail image controls
-   function currentSlide(n) {
-      clearTimeout(timer);
-     showSlides(slideIndex = n);
-   }
+      // Thumbnail image controls
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
 
-   function showSlides(n) {
-     var i;
-     var slides = document.getElementsByClassName("carousel-item");
-     if (n > slides.length) {slideIndex = 1}
-     if (n < 1) {slideIndex = slides.length}
-     for (i = 0; i < slides.length; i++) {
+      function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("carousel-item");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
          slides[i].style.display = "none";
-     }
+      }
 
-     slides[slideIndex-1].style.display = "block";
-   }
-
-    </script>
-
-    <script>
-      $(function () {
+      slides[slideIndex-1].style.display = "block";
+      }
+   $(function () {
         $(document).scroll(function () {
           var $nav = $(".main-header-nav");
           $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
       });
+
     </script>
+
     </body>
     </html>
