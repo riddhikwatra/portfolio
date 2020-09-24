@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Riddhi Kwatra</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -15,7 +15,7 @@
 
 <!-- Navigation -->
 <header class="main-header" id="header">
-    <nav class=" main-header-nav" id="navbar">
+    <nav class="main-header-nav" id="navbar">
       <!--  <img class="logo" src="img/me.jpg" alt="Riddhi Kwatra">-->
         <ul class="main-header-item-list collapse navbar-collapse ">
                 <li class="main-header-item">
@@ -27,12 +27,12 @@
                 <li class="main-header-item">
                     <a href="#experience" class="smoothScroll">Experience</a>
                 </li>
-								<li class="main-header-item">
-									<a href="#projects" class="smoothScroll">Projects</a>
-								</li>
-								<li class="main-header-item">
-									<a href="#gallery" class="smoothScroll">Gallery</a>
-								</li>
+				<li class="main-header-item">
+					<a href="#projects" class="smoothScroll">Projects</a>
+				</li>
+				<li class="main-header-item">
+					<a href="#gallery" class="smoothScroll">Gallery</a>
+				</li>
                 <li class="main-header-item">
                     <a href="#contact" class="smoothScroll">Contact</a>
                 </li>
@@ -42,10 +42,10 @@
 <div class="introsec">
     <!--- Image Slider -->
 		<img src="img/picture1.jpg" alt="" class="picture">
-    <div class= "intro">
+    <div id="introduction" class= "intro">
             <h1 class="name">Hey!</h1>
 						<h1 id="name" class="name"></h1>
-							<p id="desc" class="font-18"> I am currently persuing MCA from IGDTUW. I am a quick and enthusiastic learner, always ready to grab and learn whenever I get a chance. If you ask why I chose coding as my career? Then, being a coder, you experience adventures everyday and these adventures are something I live for. Being a coder you face challenges each day, and once you find solution to a problem there is another one waiting for you, but the best part is you learn something new from each one of them.</p>
+							<p  class="font-18"> I am currently persuing MCA from IGDTUW. I am a quick and enthusiastic learner, always ready to grab and learn whenever I get a chance. If you ask why I chose coding as my career? Then, being a coder, you experience adventures everyday and these adventures are something I live for. Being a coder you face challenges each day, and once you find solution to a problem there is another one waiting for you, but the best part is you learn something new from each one of them.</p>
     </div>
 </div>
 
@@ -198,6 +198,14 @@ function showSlides(n) {
 
   slides[slideIndex-1].style.display = "block";
 }
+</script>
+<script>
+$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".main-header-nav");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
 </script>
 
 </body>
